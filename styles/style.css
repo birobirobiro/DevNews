@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #121214;
+  --text-color: #F9F9F9;
+  --border: 1px solid #A8A8B3;
+  --news-title: #798595;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 1rem;
+  overflow: hidden;
+}
+
+input {
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+i {
+  color: var(--text-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  margin: 8rem 0;
+}
+
+main>section {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.news .title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.title i,
+.title span {
+  color: var(--news-title);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.news>div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.row-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-bottom: var(--border);
+  border-radius: 0.1rem;
+  padding: 0.5rem;
+}
+
+.row-news:last-child {
+  border-bottom: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+@media (min-width: 390px) {
+  main {
+    height: 45vh;
+  }
+
+  main::-webkit-scrollbar {
+    display: none;
+  }
+
+  input {
+    width: 12rem;
+    -webkit-text-size-adjust: none;
+  }
+}
+
+@media (min-width: 768px) {
+  main::-webkit-scrollbar {
+    display: none;
+  }
+
+  input {
+    width: 20rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  main {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+
+  input {
+    width: 30rem;
+  }
+}
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #798595;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #798595;
+  border-radius: 5px;
+}

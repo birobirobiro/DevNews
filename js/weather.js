@@ -9,11 +9,11 @@ const horaAtual = agora.getHours();
 window.onload = function () {
   // Define a saudação com base na hora atual
   if (horaAtual >= 5 && horaAtual < 12) {
-    greeting.textContent = "Boa tarde!";
+    greeting.textContent = "Bom dia!";
   } else if (horaAtual >= 12 && horaAtual < 18) {
     greeting.textContent = "Boa tarde!";
   } else {
-    greeting.textContent = "Boa tarde!";
+    greeting.textContent = "Boa noite!";
   }
 
   // Exibe a data e hora atual
@@ -23,6 +23,7 @@ window.onload = function () {
     month: "2-digit",
     day: "numeric",
   });
+
   hora.textContent = agora.toLocaleTimeString("pt-BR", {
     hour: "2-digit",
     minute: "2-digit",

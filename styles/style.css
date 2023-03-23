@@ -16,7 +16,7 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   margin: 1rem;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 input {
@@ -63,12 +63,10 @@ main>section {
 }
 
 .news {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   border: var(--border);
   border-radius: 1rem;
-  /* overflow: auto; */
+  overflow-y: scroll;
   margin-top: 0.5rem;
   width: 100%;
   max-height: 500px;
@@ -97,7 +95,7 @@ main>section {
 }
 
 .scroll {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;

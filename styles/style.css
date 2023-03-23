@@ -6,17 +6,17 @@
 
 :root {
   --background-color: #121214;
-  --text-color: #F9F9F9;
-  --border: 1px solid #A8A8B3;
+  --text-color: #f9f9f9;
+  --border: 1px solid #a8a8b3;
   --news-title: #798595;
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   color: var(--text-color);
   background-color: var(--background-color);
   margin: 1rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 input {
@@ -54,7 +54,7 @@ main {
 
   scroll-snap-type: x mandatory;
   gap: 1rem;
-  margin: 8rem 0;
+  margin-bottom: 5rem;
 }
 
 main>section {
@@ -68,9 +68,10 @@ main>section {
   align-items: center;
   border: var(--border);
   border-radius: 1rem;
-  overflow: hidden;
+  /* overflow: auto; */
   margin-top: 0.5rem;
   width: 100%;
+  max-height: 500px;
 }
 
 .news .title {
@@ -79,6 +80,7 @@ main>section {
   text-align: center;
   gap: 0.5rem;
   padding: 0.5rem;
+  border-bottom: var(--border);
 }
 
 .title i,
@@ -104,15 +106,19 @@ main>section {
 .row-news {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   border-bottom: var(--border);
   border-radius: 0.1rem;
   padding: 0.5rem;
+  word-wrap: break-word;
 }
 
 .row-news:last-child {
   border-bottom: none;
+}
+
+.row-news p {
+  font-size: 1rem;
 }
 
 footer {
@@ -139,7 +145,7 @@ footer {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   main::-webkit-scrollbar {
     display: none;
   }
@@ -147,6 +153,26 @@ footer {
   input {
     width: 20rem;
   }
+}
+
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.greeting-box {
+  display: flex;
+  gap: 0.8rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.greeting-box p {
+  font-size: 18px;
+  margin: 5px 0;
 }
 
 @media (min-width: 1024px) {
@@ -165,7 +191,6 @@ footer {
     width: 30rem;
   }
 }
-
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */

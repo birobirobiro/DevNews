@@ -19,6 +19,7 @@ body {
   overflow: hidden;
 }
 
+
 input {
   background-color: transparent;
   border: var(--border);
@@ -62,6 +63,18 @@ main>section {
   scroll-snap-stop: always;
 }
 
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.hand {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  animation: handMove 1.5s infinite;
+}
+
 .news {
   align-items: center;
   border: var(--border);
@@ -95,7 +108,7 @@ main>section {
 }
 
 .scroll {
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
@@ -126,31 +139,7 @@ footer {
   font-size: 1rem;
   text-align: center;
   justify-content: center;
-}
-
-@media (min-width: 390px) {
-  main {
-    height: 45vh;
-  }
-
-  main::-webkit-scrollbar {
-    display: none;
-  }
-
-  input {
-    width: 12rem;
-    -webkit-text-size-adjust: none;
-  }
-}
-
-@media (min-width: 920px) {
-  main::-webkit-scrollbar {
-    display: none;
-  }
-
-  input {
-    width: 20rem;
-  }
+  margin-top: 2rem;
 }
 
 .greeting-container {
@@ -173,6 +162,65 @@ footer {
   margin: 5px 0;
 }
 
+@keyframes handMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@media (min-width: 390px) {
+  main {
+    height: 45vh;
+    margin: 2rem;
+  }
+
+  main::-webkit-scrollbar {
+    display: none;
+  }
+
+  input {
+    width: 12rem;
+    -webkit-text-size-adjust: none;
+  }
+
+  .greeting-container {
+    font-size: 0.9rem;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .greeting-box p {
+    font-size: 1rem;
+  }
+
+  #hour {
+    display: none;
+  }
+
+  #previsao-tempo {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (min-width: 920px) {
+  main::-webkit-scrollbar {
+    display: none;
+  }
+
+  input {
+    width: 20rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .container {
     margin: 0 auto;
@@ -188,6 +236,24 @@ footer {
   input {
     width: 30rem;
   }
+
+  .hand {
+    display: none;
+  }
+
+  .logo {
+    position: relative;
+    width: 100px;
+  }
+
+  .logo img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+
 }
 
 /* ===== Scrollbar CSS ===== */

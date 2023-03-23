@@ -44,7 +44,7 @@ window.onload = function () {
           .then((data) => {
             const descricao = data.weather[0].description;
             const temperatura = data.main.temp;
-            previsaoTempo.textContent = `Previsão do tempo: ${descricao} e temperatura de ${temperatura}°C graus.`;
+            previsaoTempo.textContent = `Tempo ${descricao} e temperatura de ${temperatura}°C`;
           })
           .catch((error) => {
             console.error(error);

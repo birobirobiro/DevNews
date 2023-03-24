@@ -45,8 +45,9 @@ window.onload = function () {
             const descriptionCapitalized =
               description.charAt(0).toUpperCase() + description.slice(1);
             const temp = data.main.temp;
+            const tempFormatted = temp.toFixed(0);
             const city = data.name;
-            previsaoTempo.textContent = `${descriptionCapitalized} e temperatura de ${temp}°C em ${city}`;
+            previsaoTempo.textContent = `${descriptionCapitalized} e temperatura de ${tempFormatted}°C em ${city}`;
           })
 
           .catch((error) => {

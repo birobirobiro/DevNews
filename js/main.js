@@ -5,13 +5,12 @@ function GithubTrending() {
       const githubSection = document.querySelector("#github .scroll");
       const content = data
         .map(
-          (item) => `
-    <div class="row-news">
-      <a href="${item.url}" target="_blank">
-        <p>${item.title}</p>
-      </a>
-    </div>
-    `
+          (item) => {
+            let url = item.url;
+            let title = item.title;
+            let description = item.description;
+            return rowNews(url, title, description);
+          }
         )
         .join("");
       githubSection.innerHTML = content;
@@ -26,13 +25,12 @@ function ProductHunt() {
       const githubSection = document.querySelector("#product-hunt .scroll");
       const content = data
         .map(
-          (item) => `
-    <div class="row-news">
-      <a href="${item.url}" target="_blank">
-        <p>${item.title}</p>
-      </a>
-    </div>
-    `
+          (item) => {
+            let url = item.url;
+            let title = item.title;
+            let description = item.description;
+            return rowNews(url, title, description);
+          }
         )
         .join("");
       githubSection.innerHTML = content;
@@ -47,13 +45,11 @@ function HackerNews() {
       const githubSection = document.querySelector("#hackernews .scroll");
       const content = data
         .map(
-          (item) => `
-    <div class="row-news">
-      <a href="${item.url}" target="_blank">
-        <p>${item.title}</p>
-      </a>
-    </div>
-    `
+          (item) => {
+            let url = `https://news.ycombinator.com/item?id=${item.id}`;
+            let title = item.title;
+            return rowNews(url, title);
+          }
         )
         .join("");
       githubSection.innerHTML = content;
@@ -70,18 +66,27 @@ function TabNews() {
       const githubSection = document.querySelector("#tabnews .scroll");
       const content = data
         .map(
-          (item) => `
-  <div class="row-news">
-    <a href="https://tabnews.com.br/${item.owner_username}/${item.slug}" target="_blank">
-      <p>${item.title}</p>
-    </a>
-  </div>
-  `
+          (item) => {
+            let url = `https://tabnews.com.br/${item.owner_username}/${item.slug}`;
+            let title = item.title;
+            return rowNews(url, title);
+          }
         )
         .join("");
       githubSection.innerHTML = content;
     })
     .catch((error) => console.error(error));
+}
+
+
+function rowNews(url, title, description) {
+  return `
+  <div class="row-news">
+    <a href="${url}" target="_blank">
+      <p>${description ? `${title}: ${description}`: `${title}`}</p>
+    </a>
+  </div>
+  `
 }
 
 GithubTrending();

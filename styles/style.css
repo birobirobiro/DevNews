@@ -125,7 +125,7 @@ main>section {
   width: 100%;
   border-bottom: var(--border);
   border-radius: 0.1rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
   word-wrap: break-word;
 }
 

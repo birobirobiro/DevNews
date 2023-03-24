@@ -78,14 +78,19 @@ main>section {
 .news {
   align-items: center;
   border: var(--border);
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   overflow-y: scroll;
   margin-top: 0.5rem;
   width: 100%;
   max-height: 500px;
 }
 
+.news::-webkit-scrollbar {
+  width: 0;
+}
+
 .news .title {
+  position: static;
   display: flex;
   align-items: center;
   text-align: center;

@@ -35,7 +35,7 @@ window.onload = function () {
         const longitude = position.coords.longitude;
 
         fetch(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=19d46d1f32ff78d3d8ac964b5063827e&lang=pt_br&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=API_KEY&lang=pt_br&units=metric`
         )
           .then((response) => response.json())
           .then((data) => {

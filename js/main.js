@@ -8,7 +8,7 @@ function GithubTrending() {
           (item) => `
     <div class="row-news">
       <a href="${item.url}" target="_blank">
-        <p>${item.title}</p>
+      <p><strong>${item.title}</strong>: ${item.description}</p>
       </a>
     </div>
     `
@@ -29,7 +29,7 @@ function ProductHunt() {
           (item) => `
     <div class="row-news">
       <a href="${item.url}" target="_blank">
-        <p>${item.title}</p>
+      <p><strong>${item.title}</strong>: ${item.description}</p>
       </a>
     </div>
     `
@@ -50,7 +50,7 @@ function HackerNews() {
           (item) => `
     <div class="row-news">
       <a href="${item.url}" target="_blank">
-        <p>${item.title}</p>
+      <p>${item.title}</p>
       </a>
     </div>
     `

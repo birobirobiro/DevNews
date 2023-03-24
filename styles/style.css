@@ -239,7 +239,11 @@ footer a {
 @media (min-width: 1024px) {
   .container {
     margin: 1rem auto;
-    width: 70%;
+    width: 90%;
+  }
+
+  .greeting-container {
+    margin: 4rem 0;
   }
 
   main {
@@ -266,6 +270,20 @@ footer a {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 2500px) {
+  .container {
+    margin: 2rem auto;
+    width: 90%;
+    height: 90%;
+  }
+
+  main,
+  .greeting-container,
+  footer {
+    margin: 10rem auto;
   }
 }
 

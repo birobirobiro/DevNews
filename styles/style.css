@@ -19,7 +19,6 @@ body {
   overflow: hidden;
 }
 
-
 input {
   background-color: transparent;
   border: var(--border);
@@ -132,14 +131,14 @@ main>section {
   font-size: 1rem;
 }
 
-footer {
+footer a {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
   font-size: 1rem;
   text-align: center;
   justify-content: center;
   margin-top: 2rem;
+  gap: 0.4rem;
 }
 
 .greeting-container {
@@ -148,18 +147,15 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 3rem 0;
+  font-family: "Poppins", sans-serif;
+  color: #c1c1c1;
 }
 
 .greeting-box {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.2rem;
   text-align: center;
   padding: 10px;
-}
-
-.greeting-box p {
-  font-size: 18px;
-  margin: 5px 0;
 }
 
 @keyframes handMove {
@@ -176,39 +172,44 @@ footer {
   }
 }
 
-@media (min-width: 390px) {
+@media (min-width: 300px) {
   main {
-    height: 45vh;
-    margin: 2rem;
+    height: 50vh;
+    margin: 2rem 0 4rem 0;
   }
 
   main::-webkit-scrollbar {
     display: none;
   }
 
-  input {
-    width: 12rem;
-    -webkit-text-size-adjust: none;
+  nav {
+    justify-content: center;
+  }
+
+  input,
+  .logo {
+    display: none;
   }
 
   .greeting-container {
     font-size: 0.9rem;
     gap: 0.5rem;
     text-align: center;
+    margin: 2rem 0;
   }
 
-  .greeting-box p {
+  .greeting-box span {
     font-size: 1rem;
   }
 
-  #hour {
+  #hour,
+  #previsao-tempo {
     display: none;
   }
 
-  #previsao-tempo {
-    font-size: 0.9rem;
+  .hand {
+    padding: 0.5rem 0;
   }
-
 }
 
 @media (min-width: 920px) {
@@ -219,11 +220,25 @@ footer {
   input {
     width: 20rem;
   }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  input,
+  .logo {
+    display: block;
+  }
+
+  #hour,
+  #previsao-tempo {
+    display: block;
+  }
 }
 
 @media (min-width: 1024px) {
   .container {
-    margin: 0 auto;
+    margin: 1rem auto;
     width: 70%;
   }
 
@@ -252,8 +267,6 @@ footer {
     top: 50%;
     transform: translateY(-50%);
   }
-
-
 }
 
 /* ===== Scrollbar CSS ===== */

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "DevNews",
+  "version": "1.0",
+  "description": "Suas notícias de programação em um só lugar",
+  "icons": {
+    "16": "/assets/favicon.svg",
+    "48": "/assets/favicon.svg",
+    "128": "/assets/favicon.svg"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["geolocation"]
+}

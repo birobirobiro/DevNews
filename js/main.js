@@ -72,7 +72,7 @@ function TabNews() {
         .map(
           (item) => `
   <div class="row-news">
-    <a href="${item.url}" target="_blank">
+    <a href="https://tabnews.com.br/${item.owner_username}/${item.slug}" target="_blank">
       <p>${item.title}</p>
     </a>
   </div>

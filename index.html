@@ -6,6 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DevNews</title>
+  <meta name="language" content="pt-BR" />
+  <meta name="description" content="Suas notícias de programação em um só lugar" />
+  <meta name="robots" content="index" />
+  <meta name="author" content="birobirobiro" />
+  <meta name="keywords"
+    content="devnews, tabnews, rocketseat, noticias, tecnoblog, tecmundo, noticias de tecnologia, notícias" />
+  <meta property="og:type" content="page" />
+  <meta property="og:url" content="https://devnews.birobirobiro.dev" />
+  <meta property="og:title" content="DevNews" />
+  <meta property="og:image" content="https://i.ibb.co/M1gjQ10/preview.png" />
+  <meta property="og:description" content="Suas notícias de programação em um só lugar" />
+  <meta property="article:author" content="birobirobiro" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@birobirobirodev" />
+  <meta name="twitter:title" content="DevNews" />
+  <meta name="twitter:creator" content="@birobirobirodev" />
+  <meta name="twitter:description" content="Suas notícias de programação em um só lugar" />
 
   <link rel="stylesheet" href="./styles/style.css" />
 
@@ -13,9 +30,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Poppins&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LL52ZE8B4J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-LL52ZE8B4J");
+  </script>
 
   <script src="./js/main.js"></script>
   <script src="./js/weather.js" defer></script>
@@ -43,12 +73,13 @@
 
     <div class="greeting-container">
       <div class="greeting-box">
-        <p id="greeting"></p>
-        <p id="data"></p>
-        <p id="hora"></p>
+        <span id="greeting"></span>
+        <span id="data"></span>
+        <span id="hora"></span>
       </div>
       <div>
-        <p id="previsao-tempo"></p>
+        <span id="previsao-tempo"></span>
+        <span id="loading"></span>
       </div>
     </div>
 
@@ -58,6 +89,19 @@
           <img src="./assets/tabnews.svg" alt="tabnews" width="24px" height="24px" />
           <a href="https://tabnews.com.br" target="_blank">
             <span>TabNews</span>
+          </a>
+        </div>
+
+        <div class="scroll">
+          <!-- News items will be dynamically added here -->
+        </div>
+      </section>
+
+      <section class="news" id="github">
+        <div class="title">
+          <i class="fa fa-github"></i>
+          <a href="https://github.com/trending" target="_blank">
+            <span>GitHub</span>
           </a>
         </div>
 
@@ -91,32 +135,21 @@
           <!-- News items will be dynamically added here -->
         </div>
       </section>
-
-      <section class="news" id="github">
-        <div class="title">
-          <i class="fa fa-github"></i>
-          <a href="https://github.com/trending" target="_blank">
-            <span>GitHub</span>
-          </a>
-        </div>
-
-        <div class="scroll">
-          <!-- News items will be dynamically added here -->
-        </div>
-      </section>
     </main>
 
     <div class="hand">
-      <img src="./assets/scroll.svg" alt="scroll" width="30px" height="30px">
+      <img src="./assets/scroll.svg" alt="scroll" width="30px" height="30px" />
     </div>
 
     <footer>
-      <p>Build with</p>
-      <i class="fa fa-html5"></i>
-      <i class="fa fa-css3"></i>
-      <img src="./assets/javascript.svg" alt="javascript" width="16px" height="16px" />
-      <p>&</p>
-      <i class="fa fa-heart"></i>
+      <a href="https://birobirobiro.dev" target="_blank">
+        <p>Build with</p>
+        <i class="fa fa-html5"></i>
+        <i class="fa fa-css3"></i>
+        <img src="./assets/javascript.svg" alt="javascript" width="16px" height="16px" />
+        <p>&</p>
+        <i class="fa fa-heart"></i>
+      </a>
     </footer>
   </div>
 </body>

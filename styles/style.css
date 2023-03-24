@@ -274,6 +274,10 @@ footer a {
 }
 
 @media (min-width: 2500px) {
+  body {
+    overflow: scroll;
+  }
+
   .container {
     margin: 2rem auto;
     width: 90%;

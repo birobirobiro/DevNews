@@ -12,7 +12,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - JavaScript
 
-🌍 ## Acesse o site:
+## 🌍 Acesse o site:
 
 - [https://devnews.birobirobiro.dev](https://devnews.birobirobiro.dev)
 

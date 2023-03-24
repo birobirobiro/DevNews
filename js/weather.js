@@ -1,32 +1,34 @@
 import { API_KEY } from "./config.js";
 
-const greeting = document.getElementById("greeting");
-const data = document.getElementById("data");
-const hora = document.getElementById("hora");
+const greetingSpan = document.getElementById("greeting");
 const previsaoTempo = document.getElementById("previsao-tempo");
 
 const now = new Date();
 const dateNow = now.getHours();
 
 window.onload = function () {
+  var greeting;
+
   // Define a saudação com base na hora atual
   if (dateNow >= 5 && dateNow < 12) {
-    greeting.textContent = "Bom dia! Hoje é";
+    greeting = "Bom dia! Hoje é";
   } else if (dateNow >= 12 && dateNow < 18) {
-    greeting.textContent = "Boa tarde! Hoje é";
+    greeting = "Boa tarde! Hoje é";
   } else {
-    greeting.textContent = "Boa noite! Hoje é";
+    greeting = "Boa noite! Hoje é";
   }
 
   // Exibe a data e hora atual
-  data.textContent = now.toLocaleDateString("pt-BR", {
+  var date = now.toLocaleDateString("pt-BR", {
     weekday: "long",
   });
 
-  hora.textContent = now.toLocaleTimeString("pt-BR", {
+  var hour = now.toLocaleTimeString("pt-BR", {
     hour: "2-digit",
     minute: "2-digit",
   });
+
+  greetingSpan.textContent = `${greeting} ${date} às ${hour}`;
 
   previsaoTempo.textContent = "Carregando previsão do tempo...";
 

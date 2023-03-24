@@ -147,16 +147,8 @@ footer a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0;
   font-family: "Poppins", sans-serif;
   color: #c1c1c1;
-}
-
-.greeting-box {
-  display: flex;
-  gap: 0.2rem;
-  text-align: center;
-  padding: 10px;
 }
 
 @keyframes handMove {

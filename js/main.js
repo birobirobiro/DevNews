@@ -63,7 +63,7 @@ function HackerNews() {
 
 function TabNews() {
   fetch(
-    "https://www.tabnews.com.br/api/v1/contents?page=1&per_page=50&strategy=relevant"
+    "https://www.tabnews.com.br/api/v1/contents?strategy=relevant"
   )
     .then((response) => response.json())
     .then((data) => {

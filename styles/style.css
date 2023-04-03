@@ -291,6 +291,12 @@ footer a {
   }
 }
 
+@media (min-height: 768px) {
+  body {
+    overflow: scroll;
+  }
+}
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {

@@ -47,7 +47,13 @@ window.onload = function () {
             const temp = data.main.temp;
             const tempFormatted = temp.toFixed(0);
             const city = data.name;
-            previsaoTempo.textContent = `${descriptionCapitalized} e temperatura de ${tempFormatted}°C em ${city}`;
+            const weatherIconCode = data.weather[0].icon;
+            const weatherIconUrl = `https://openweathermap.org/img/wn/${weatherIconCode}.png`;
+
+            previsaoTempo.innerHTML = `
+            <div class="info-weather">
+            <img src="${weatherIconUrl}" alt="${descriptionCapitalized}"/> ${descriptionCapitalized} e temperatura de ${tempFormatted}°C em ${city}
+            </div>`;
           })
 
           .catch((error) => {

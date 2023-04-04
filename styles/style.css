@@ -62,6 +62,12 @@ main>section {
   scroll-snap-stop: always;
 }
 
+.info-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .search {
   display: flex;
   justify-content: center;

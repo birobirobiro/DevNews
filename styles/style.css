@@ -66,6 +66,12 @@ main>section {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.info-weather img {
+  display: none;
 }
 
 .search {
@@ -161,7 +167,6 @@ footer a {
   display: flex;
   gap: 0.2rem;
   text-align: center;
-  padding: 10px;
 }
 
 @keyframes handMove {
@@ -208,11 +213,6 @@ footer a {
     font-size: 1rem;
   }
 
-  #hour,
-  #previsao-tempo {
-    display: none;
-  }
-
   .hand {
     padding: 0.5rem 0;
   }
@@ -238,6 +238,14 @@ footer a {
 
   #hour,
   #previsao-tempo {
+    display: block;
+  }
+
+  .info-weather {
+    font-size: 0.9rem;
+  }
+
+  .info-weather img {
     display: block;
   }
 }

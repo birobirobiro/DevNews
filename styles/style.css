@@ -16,7 +16,6 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   margin: 1rem;
-  overflow: hidden;
 }
 
 input {
@@ -57,7 +56,7 @@ main {
   margin-bottom: 5rem;
 }
 
-main>section {
+main > section {
   scroll-snap-align: center;
   scroll-snap-stop: always;
 }
@@ -112,7 +111,7 @@ main>section {
   font-weight: 500;
 }
 
-.news>div {
+.news > div {
   display: flex;
   justify-content: center;
   width: 100%;

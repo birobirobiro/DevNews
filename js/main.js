@@ -40,6 +40,27 @@ function ProductHunt() {
     .catch((error) => console.error(error));
 }
 
+function Medium() {
+  fetch("https://api.hackertab.dev/data/v2/devto/programming.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const mediumSection = document.querySelector("#medium .scroll");
+      const content = data
+        .map(
+          (item) => `
+    <div class="row-news">
+      <a href="${item.url}" target="_blank">
+      <p><strong>${item.title}</strong>: ${item.description}</p>
+      </a>
+    </div>
+    `
+        )
+        .join("");
+      mediumSection.innerHTML = content;
+    })
+    .catch((error) => console.error(error));
+}
+
 function TabNews() {
   fetch(
     "https://www.tabnews.com.br/api/v1/contents?strategy=relevant"
@@ -85,29 +106,29 @@ function getCookie(name) {
   return "";
 }
 
-function DailyDev() {
-  fetch("https://cors-everywhere.onrender.com/https://dailydev.up.railway.app/")
-    .then((response) => response.json())
-    .then((data) => {
-      const dailydevSection = document.querySelector("#dailydev .scroll");
-      const content = data
-        .map(
-          (item) => `
-    <div class="row-news">
-      <a href="${item.link}" target="_blank">
-      <p>${item.title}</p>
-      </a>
-    </div>
-    `
-        )
-        .join("");
-      dailydevSection.innerHTML = content;
+// function DailyDev() {
+//   fetch("https://cors-everywhere.onrender.com/https://dailydev.up.railway.app/")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       const dailydevSection = document.querySelector("#dailydev .scroll");
+//       const content = data
+//         .map(
+//           (item) => `
+//     <div class="row-news">
+//       <a href="${item.link}" target="_blank">
+//       <p>${item.title}</p>
+//       </a>
+//     </div>
+//     `
+//         )
+//         .join("");
+//       dailydevSection.innerHTML = content;
 
-      // Salvar dados no cookie
-      setCookie("dailydevData", JSON.stringify(data), 1); // 1 dia de duração do cookie
-    })
-    .catch((error) => console.error(error));
-}
+//       // Salvar dados no cookie
+//       setCookie("dailydevData", JSON.stringify(data), 1); // 1 dia de duração do cookie
+//     })
+//     .catch((error) => console.error(error));
+// }
 
 // Função para carregar dados do cookie e chamar a função DailyDev()
 function loadFromCookie() {
@@ -131,6 +152,7 @@ function loadFromCookie() {
 }
 
 GithubTrending();
+Medium();
 ProductHunt();
 TabNews();
-DailyDev();
+// DailyDev();

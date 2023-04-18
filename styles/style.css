@@ -5,10 +5,10 @@
 }
 
 :root {
-  --background-color: #121214;
-  --text-color: #f9f9f9;
-  --border: 1px solid #a8a8b3;
-  --news-title: #798595;
+  --background-color: #303446;
+  --text-color: #c6d0f5;
+  --border: 1px solid #c6d0f5;
+  --news-title: #51576d;
 }
 
 body {
@@ -167,6 +167,17 @@ footer a {
   display: flex;
   gap: 0.2rem;
   text-align: center;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 14px;
 }
 
 @keyframes handMove {

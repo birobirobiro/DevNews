@@ -41,7 +41,7 @@ function ProductHunt() {
 }
 
 function Medium() {
-  fetch("https://api.hackertab.dev/data/v2/devto/programming.json")
+  fetch("https://api.hackertab.dev/data/v2/medium/javascript.json")
     .then((response) => response.json())
     .then((data) => {
       const mediumSection = document.querySelector("#medium .scroll");
@@ -50,7 +50,7 @@ function Medium() {
           (item) => `
     <div class="row-news">
       <a href="${item.url}" target="_blank">
-      <p><strong>${item.title}</strong>: ${item.description}</p>
+      <p><strong>${item.title}</strong></p>
       </a>
     </div>
     `

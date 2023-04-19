@@ -160,24 +160,13 @@ footer a {
   align-items: center;
   margin: 3rem 0;
   font-family: "Poppins", sans-serif;
-  color: #c1c1c1;
+  color: #a5adce;
 }
 
 .greeting-box {
   display: flex;
   gap: 0.2rem;
   text-align: center;
-}
-
-.tooltip {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 5px;
-  font-size: 14px;
 }
 
 @keyframes handMove {
@@ -313,12 +302,6 @@ footer a {
   .greeting-container,
   footer {
     margin: 10rem auto;
-  }
-}
-
-@media (min-height: 768px) {
-  body {
-    overflow: scroll;
   }
 }
 

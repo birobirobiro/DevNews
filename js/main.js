@@ -23,7 +23,9 @@ function ProductHunt() {
   fetch("https://api.hackertab.dev/data/v2/producthunt.json")
     .then((response) => response.json())
     .then((data) => {
-      const producthuntSection = document.querySelector("#product-hunt .scroll");
+      const producthuntSection = document.querySelector(
+        "#product-hunt .scroll"
+      );
       const content = data
         .map(
           (item) => `
@@ -62,9 +64,7 @@ function Medium() {
 }
 
 function TabNews() {
-  fetch(
-    "https://www.tabnews.com.br/api/v1/contents?strategy=relevant"
-  )
+  fetch("https://www.tabnews.com.br/api/v1/contents?strategy=relevant")
     .then((response) => response.json())
     .then((data) => {
       const tabnewsSection = document.querySelector("#tabnews .scroll");

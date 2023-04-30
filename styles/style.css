@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   color: var(--text-color);
   background-color: var(--background-color);
   margin: 1rem;
@@ -57,7 +57,7 @@ main {
   margin-bottom: 5rem;
 }
 
-main > section {
+main>section {
   scroll-snap-align: center;
   scroll-snap-stop: always;
 }
@@ -112,7 +112,7 @@ main > section {
   font-weight: 500;
 }
 
-.news > div {
+.news>div {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -159,7 +159,7 @@ footer a {
   justify-content: center;
   align-items: center;
   margin: 3rem 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #a5adce;
 }
 

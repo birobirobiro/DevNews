@@ -35,12 +35,12 @@ window.onload = function () {
       (position) => {
 
         // Para usar a localização do navegador, descomente esse código
-        // const latitude = position.coords.latitude;
-        // const longitude = position.coords.longitude;
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
 
         // Latitude e longitude de São Paulo
-        const latitude = -23.5489;
-        const longitude = -46.6388;
+        // const latitude = -23.5489;
+        // const longitude = -46.6388;
 
         fetch(
           `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&lang=pt_br&units=metric`

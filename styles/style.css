@@ -16,6 +16,7 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   margin: 1rem;
+  overflow: hidden;
 }
 
 input {
@@ -262,7 +263,6 @@ footer a {
   main {
     flex-direction: row;
     flex-wrap: nowrap;
-    height: auto;
   }
 
   input {
